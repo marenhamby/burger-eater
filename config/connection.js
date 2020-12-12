@@ -9,3 +9,14 @@ var connection = mysql.createConnection({
     password: "",
     database: "burger_db",
 });
+
+//make connection to the database
+connection.connect(function(err) {
+    //if there's an error in the connection, display what the error is
+    if (err) {
+        console.error("ERROR in connection: " + err.stack);
+        return;
+    };
+    //if no error, display succcess message with the connection information
+    console.log("connected as id " + connection.threadId);
+});
