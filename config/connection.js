@@ -20,3 +20,6 @@ connection.connect(function(err) {
     //if no error, display succcess message with the connection information
     console.log("connected as id " + connection.threadId);
 });
+
+//send the connection information to be used by other modules
+modules.exports = connection;
