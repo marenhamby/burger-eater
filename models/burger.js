@@ -9,8 +9,10 @@ var burger = {
             callback(res);
         });
     },
-    create: function() {
-
+    create: function(columns, values, callback) {
+        orm.create("burgers", columns, values, function(res){
+            callback(res);
+        });
     },
     // update: function() {
 
