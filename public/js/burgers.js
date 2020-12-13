@@ -37,7 +37,7 @@ $(function() {
         });
     });
     //add function behind the delete button to remove the burger from the table
-    $("#delete").on("click", function(event) {
+    $(".delete").on("click", function(event) {
         var id = $(this).data("id");
 
         $.ajax("/api/burgers/" + id, {

@@ -38,9 +38,9 @@ var orm = {
     delete: function(tableInput, condition, callback) {
         //delete burger
         //desired outcome format: DELETE FROM burgers WHERE id=//#endregion
-        var queryString = "DELETE FROM ?? WHERE " + condition;
+        var queryString = "DELETE FROM " +tableInput+ " WHERE " + condition;
         console.log(queryString);
-        connection.query(queryString, [tableInput], function(err, res) {
+        connection.query(queryString, function(err, res) {
             if (err) throw err;
             callback(res);
         });
