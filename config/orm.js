@@ -14,6 +14,7 @@ var orm = {
         })
     },
     create: function(tableInput, column, columnValue, callback) {
+        //add new burger to list
         //desired outcome format: INSERT INTO burgers (name) VALUES ("New Burger");
         var queryString = `INSERT INTO ?? (??) VALUES ("?")`;
         console.log(queryString);
@@ -21,12 +22,19 @@ var orm = {
         connection.query(queryString, [tableInput, column, columnValue], function(err, res) {
             if (err) throw err;
             callback(res);
-        })
+        });
 
     },
-    // update: function() {
-
-    // },
+    update: function(tableInput, column, condition, callback) {
+        //change status of current burger
+        //desired outcome format: UPDATE burgers SET eaten = true WHERE id=#
+        var queryString = "UPDATE ?? SET ?? = true WHERE "+condition; 
+        console.log(queryString);
+        connection.query(queryString, [tableInput, column], function(err, res){
+            if(err) throw err;
+            callback(res);
+        })
+    },
     // delete: function() {
 
     // }
