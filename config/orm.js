@@ -16,10 +16,10 @@ var orm = {
     insertOne: function(tableInput, column, value, callback) {
         //add new burger to list
         //desired outcome format: INSERT INTO burgers (name) VALUES ("New Burger");
-        var queryString = `INSERT INTO ?? (??) VALUES ("?")`;
+        var queryString = 'INSERT INTO ' +tableInput + '(' + column + ') VALUES ("' + value +'")';
         console.log(queryString);
 
-        connection.query(queryString, [tableInput, column, value], function(err, res) {
+        connection.query(queryString, function(err, res) {
             if (err) throw err;
             callback(res);
         });
