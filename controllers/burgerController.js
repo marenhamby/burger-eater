@@ -20,5 +20,13 @@ router.get("/", function(req,res) {
     });
 });
 
+router.post("/api/burgers", function(req, res){
+    //add name of the new burger
+    burger.create("name", req.body.name, function(result){
+        //get the id of the new burger
+        res.json({ id: result.insertId});
+    });
+});
+
 // Export routes for server.js to use.
 module.exports = router;
