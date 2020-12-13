@@ -13,13 +13,13 @@ var orm = {
             callback(res);
         })
     },
-    create: function(tableInput, column, columnValue, callback) {
+    create: function(tableInput, column, value, callback) {
         //add new burger to list
         //desired outcome format: INSERT INTO burgers (name) VALUES ("New Burger");
         var queryString = `INSERT INTO ?? (??) VALUES ("?")`;
         console.log(queryString);
 
-        connection.query(queryString, [tableInput, column, columnValue], function(err, res) {
+        connection.query(queryString, [tableInput, column, value], function(err, res) {
             if (err) throw err;
             callback(res);
         });

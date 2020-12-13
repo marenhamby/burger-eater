@@ -9,14 +9,14 @@ var burger = {
             callback(res);
         });
     },
-    create: function(columns, values, callback) {
-        orm.create("burgers", columns, values, function(res){
+    create: function(column, value, callback) {
+        orm.create("burgers", column, value, function(res){
             callback(res);
         });
     },
-    // update: function() {
+    update: function() {
 
-    // },
+    },
     // delete: function() {
 
     // }
