@@ -14,8 +14,10 @@ var burger = {
             callback(res);
         });
     },
-    update: function() {
-
+    update: function(column, condition, callback) {
+        orm.update("burgers", column, condition, function(res){
+            callback(res);
+        });
     },
     // delete: function() {
 
