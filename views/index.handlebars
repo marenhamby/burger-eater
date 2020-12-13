@@ -6,6 +6,9 @@
 <ul>
     {{#each burgers}}
         <li>
+        <span>{{this.name}}</span>
+        <button type="button" id="eat" data-id="{{this.id}}"
+            data-newEat="{{eat}}">Eat it!</button>
         </li>
     {{/each}}
 </ul>
