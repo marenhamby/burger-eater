@@ -13,9 +13,17 @@ var orm = {
             callback(res);
         })
     },
-    // create: function() {
-        
-    // },
+    create: function(tableInput, column, columnValue) {
+        //desired outcome format: INSERT INTO burgers (name) VALUES ("New Burger");
+        var queryString = `INSERT INTO ?? (??) VALUES ("?")`;
+        console.log(queryString);
+
+        connection.query(queryString, [tableInput, column, columnValue], function(err, res) {
+            if (err) throw err;
+            console.log(res);
+        })
+
+    },
     // update: function() {
 
     // },

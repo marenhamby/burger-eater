@@ -9,9 +9,9 @@ var burger = {
             callback(res);
         });
     },
-    // create: function() {
-        
-    // },
+    create: function() {
+
+    },
     // update: function() {
 
     // },
