@@ -17,7 +17,7 @@ app.use(express.json());
 //require the handlebars to be used to dynamically display pages
 var exphbs = require("express-handlebars");
 
-app.engint("handlebars", exphbs({defaultLayout: "main"}))
+app.engine("handlebars", exphbs({defaultLayout: "main"}))
 app.set("view engine", "handlebars");
 
 //pull in the routes from the controller.js file so they can be used by the server
