@@ -1,7 +1,7 @@
 -- if the database exists already, then delete it it --
 DROP DATABASE IF EXISTS burger_db;
 
---create the database
+--create the database--
 CREATE DATABASE burger_db;
 
 --use the burger database for the rest of this document--
