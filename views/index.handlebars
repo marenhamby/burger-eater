@@ -5,11 +5,13 @@
 <h2>I must eat these</h2>
 <ul>
     {{#each burgers}}
+        {{#unless devoured}}
         <li>
-        <span>{{this.name}}</span>
+        <span>{{this.burger_name}}</span>
         <button type="button" id="eat" data-id="{{this.id}}"
             data-newEat="{{eat}}">Eat it!</button>
         </li>
+        {{/unless}}
     {{/each}}
 </ul>
 
@@ -18,6 +20,12 @@
 <h2>I already ate these</h2>
 <ul>
     {{#each burgers}}
+        {{#if devoured}}
+        <li>
+        <span>{{this.burger_name}}</span>
+        <button type="button" id="delete" data-id="{{this.id}}">delete</button>
+        </li>
+        {{/if}}
     {{/each}}
 </ul>
 
