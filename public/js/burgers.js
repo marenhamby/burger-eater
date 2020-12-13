@@ -21,7 +21,22 @@ $(function() {
         });
     });
     //add function behind the button to devour the burger so the devoured setting changes to true and it will move to the second table
-    
+    $(".eatMe").on("click", function(event) {
+        var id = $(this).data("id");
+        var newEat = $(this).data("newEat");
+
+        var newConsumedState = {
+            devoured: newEat
+        };
+
+        $.ajax("/api/burgers/" + id, {
+            type: "PUT",
+            data: newConsumedState
+        }).then(function() {
+            console.log("changed consumed state");
+            location.reload();
+        });
+    });
     //add function behind the delete button to remove the burger from the table
 
 
