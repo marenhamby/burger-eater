@@ -19,3 +19,6 @@ router.get("/", function(req,res) {
         res.render("index", hbsObject);
     });
 });
+
+// Export routes for server.js to use.
+module.exports = router;

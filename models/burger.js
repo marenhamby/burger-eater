@@ -9,13 +9,13 @@ var burger = {
             callback(res);
         });
     },
-    create: function() {
+    // create: function() {
         
-    },
-    update: function() {
+    // },
+    // update: function() {
 
-    },
-    delete: function() {
+    // },
+    // delete: function() {
 
-    }
+    // }
 };

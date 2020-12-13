@@ -13,15 +13,15 @@ var orm = {
             callback(res);
         })
     },
-    create: function() {
+    // create: function() {
         
-    },
-    update: function() {
+    // },
+    // update: function() {
 
-    },
-    delete: function() {
+    // },
+    // delete: function() {
 
-    }
+    // }
 };
 
 //export the orm object for the model document (burger.js)
