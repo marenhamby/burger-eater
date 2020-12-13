@@ -28,16 +28,23 @@ var orm = {
     update: function(tableInput, column, condition, callback) {
         //change status of current burger
         //desired outcome format: UPDATE burgers SET eaten = true WHERE id=#
-        var queryString = "UPDATE ?? SET ?? = true WHERE "+condition; 
+        var queryString = "UPDATE ?? SET ?? = true WHERE "+ condition; 
         console.log(queryString);
         connection.query(queryString, [tableInput, column], function(err, res){
             if(err) throw err;
             callback(res);
         })
     },
-    // delete: function() {
-
-    // }
+    delete: function(tableInput, condition, callback) {
+        //delete burger
+        //desired outcome format: DELETE FROM burgers WHERE id=//#endregion
+        var queryString = "DELETE FROM ?? WHERE " + condition;
+        console.log(queryString);
+        connection.query(queryString, [tableInput], function(err, res) {
+            if (err) throw err;
+            callback(res);
+        });
+    }
 };
 
 //export the orm object for the model document (burger.js)
