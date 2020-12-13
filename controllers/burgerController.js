@@ -31,8 +31,9 @@ router.post("/api/burgers", function(req, res){
 router.put("/api/burgers/:id", function(req, res){
     //change the devoured condition of the selected row
     var condition = "id = " + req.params.id;
+    var column = "devoured = " + req.body.devoured;
 
-    burger.updateOne({devoured: req.body.devoured}, condition, function(result) {
+    burger.updateOne(column, condition, function(result) {
         //if nothing was changed, throw error
         if (result.changedRows === 0) {
             return res.status(404).end();
