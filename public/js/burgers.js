@@ -23,10 +23,9 @@ $(function() {
     //add function behind the button to devour the burger so the devoured setting changes to true and it will move to the second table
     $(".eatMe").on("click", function(event) {
         var id = $(this).data("id");
-        var newEat = $(this).data("newEat");
 
         var newConsumedState = {
-            devoured: newEat
+            devoured: 1
         };
 
         $.ajax("/api/burgers/" + id, {
