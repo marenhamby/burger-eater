@@ -19,3 +19,6 @@ var burger = {
 
     // }
 };
+
+//Export the functions for the controller document
+module.exports = burger;
