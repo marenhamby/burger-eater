@@ -10,7 +10,7 @@ var burger = require("../models/burger.js");
 //ROUTES
 router.get("/", function(req,res) {
     //add function to be used in the callback in the burger.js file
-    burger.all(function(data){
+    burger.selectAll(function(data){
         var hbsObject = {
             burgers: data
         };

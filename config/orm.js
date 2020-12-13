@@ -6,7 +6,7 @@ var orm = {
     //create outlines to be used in the burger.js file to take action in the database accoring to what actions have been requested
     
     //view all items in the table listed in the burger.js file
-    all: function(tableInput, callback) {
+    selectAll: function(tableInput, callback) {
         var queryString = "SELECT * FROM " + tableInput + ";";
         connection.query(queryString, function(err, res) {
             if (err) throw err;

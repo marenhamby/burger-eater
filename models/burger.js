@@ -5,7 +5,7 @@ var orm = require("../config/orm.js");
 var burger = {
     all: function(callback) {
         //use the orm outline and send in relevant table informatin to complete the database request line to display all table information
-        orm.all("burgers", function(res) {
+        orm.selectAll("burgers", function(res) {
             callback(res);
         });
     },
