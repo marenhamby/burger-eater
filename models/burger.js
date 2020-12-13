@@ -3,14 +3,14 @@ var orm = require("../config/orm.js");
 
 //use orm outline to model the burger object
 var burger = {
-    all: function(callback) {
+    selectAll: function(callback) {
         //use the orm outline and send in relevant table informatin to complete the database request line to display all table information
         orm.selectAll("burgers", function(res) {
             callback(res);
         });
     },
-    create: function(column, value, callback) {
-        orm.create("burgers", column, value, function(res){
+    insertOne: function(column, value, callback) {
+        orm.insertOne("burgers", column, value, function(res){
             callback(res);
         });
     },

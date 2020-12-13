@@ -13,7 +13,7 @@ var orm = {
             callback(res);
         })
     },
-    create: function(tableInput, column, value, callback) {
+    insertOne: function(tableInput, column, value, callback) {
         //add new burger to list
         //desired outcome format: INSERT INTO burgers (name) VALUES ("New Burger");
         var queryString = `INSERT INTO ?? (??) VALUES ("?")`;
