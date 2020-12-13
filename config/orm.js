@@ -25,7 +25,7 @@ var orm = {
         });
 
     },
-    update: function(tableInput, column, condition, callback) {
+    updateOne: function(tableInput, column, condition, callback) {
         //change status of current burger
         //desired outcome format: UPDATE burgers SET devoured = true WHERE id=#
         var queryString = "UPDATE ?? SET ?? = true WHERE "+ condition; 
