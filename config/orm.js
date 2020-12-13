@@ -16,7 +16,7 @@ var orm = {
     insertOne: function(tableInput, column, value, callback) {
         //add new burger to list
         //desired outcome format: INSERT INTO burgers (name) VALUES ("New Burger");
-        var queryString = 'INSERT INTO ' +tableInput + '(' + column + ') VALUES ("' + value +'")';
+        var queryString = 'INSERT INTO ' +tableInput + ' (' + column + ') VALUES ("' + value +'")';
         console.log(queryString);
 
         connection.query(queryString, function(err, res) {
@@ -28,9 +28,9 @@ var orm = {
     updateOne: function(tableInput, column, condition, callback) {
         //change status of current burger
         //desired outcome format: UPDATE burgers SET devoured = true WHERE id=#
-        var queryString = "UPDATE ?? SET ?? = true WHERE "+ condition; 
+        var queryString = "UPDATE " +tableInput +" SET "+ column + "= true WHERE "+ condition; 
         console.log(queryString);
-        connection.query(queryString, [tableInput, column], function(err, res){
+        connection.query(queryString, function(err, res){
             if(err) throw err;
             callback(res);
         })
