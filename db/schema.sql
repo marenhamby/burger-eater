@@ -11,6 +11,6 @@ USE burger_db;
 --include unique id (as the primary key), the name of the burger, and an indication of whether or not the burger has been eaten--
 CREATE TABLE burgers (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(75) NOT NULL,
-    eaten BOOLEAN DEFAULT false
+    burger_name VARCHAR(75) NOT NULL,
+    devoured BOOLEAN DEFAULT false
 );

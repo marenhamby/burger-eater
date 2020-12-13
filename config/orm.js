@@ -27,7 +27,7 @@ var orm = {
     },
     update: function(tableInput, column, condition, callback) {
         //change status of current burger
-        //desired outcome format: UPDATE burgers SET eaten = true WHERE id=#
+        //desired outcome format: UPDATE burgers SET devoured = true WHERE id=#
         var queryString = "UPDATE ?? SET ?? = true WHERE "+ condition; 
         console.log(queryString);
         connection.query(queryString, [tableInput, column], function(err, res){

@@ -29,10 +29,10 @@ router.post("/api/burgers", function(req, res){
 });
 
 router.put("/api/burgers/:id", function(req, res){
-    //change the eaten condition of the selected row
+    //change the devoured condition of the selected row
     var condition = "id = " + req.params.id;
 
-    burger.update(eaten, condition, function(result) {
+    burger.update(devoured, condition, function(result) {
         //if nothing was changed, throw error
         if (result.changedRows === 0) {
             return res.status(404).end();
