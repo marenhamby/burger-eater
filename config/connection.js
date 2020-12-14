@@ -28,3 +28,4 @@ connection.connect(function(err) {
 
 //send the connection information to be used by other modules
 module.exports = connection;
+
