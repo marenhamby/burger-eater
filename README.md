@@ -13,5 +13,5 @@ This application requires you to download the express, mysql, and express-handle
 Click on the screenshot to get to the deployed website:!
 
 <a href="https://guarded-inlet-46841.herokuapp.com/
-" target="_blank"><img src="./public/assets/burger_screenshot.png" 
+" target="_blank"><img src="./public/assets/burger-eater.png" 
 alt="Burger Page Screenshot" width="700"/></a>
