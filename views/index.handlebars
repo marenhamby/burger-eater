@@ -1,40 +1,56 @@
 {{!-- add bulk html outline for the content of the burger page --}}
-<h1 style="color: #045762; text-align:center">Burger Love</h1>
+<h1 style="color: #045762; text-align:center; padding: 4vmin">Burger Love
+</h1>
 
-{{!-- burger information for newly added burgers --}}
-<h2>I must eat these</h2>
-<ul>
-    {{#each burgers}}
-        {{#unless devoured}}
-        <li>
-        <span>{{this.burger_name}}</span>
-        <button class="eatMe" type="button" id="eat" data-id="{{this.id}}"
-            data-newEat="{{eat}}">Eat it!</button>
-        </li>
-        {{/unless}}
-    {{/each}}
-</ul>
-
-
-{{!-- burger information for the consumed burgers --}}
-<h2>I already ate these</h2>
-<ul>
-    {{#each burgers}}
-        {{#if devoured}}
-        <li>
-        <span>{{this.burger_name}}</span>
-        <button type="button" class="delete" data-id="{{this.id}}">Delete it!</button>
-        </li>
-        {{/if}}
-    {{/each}}
-</ul>
-
-{{!-- section to add a new burger --}}
-<h2>Add a new burger:</h2>
-<form class="form-class">
-    <div>
-        <label for="new">Burger name:</label>
-        <input type="text" id="new" name="burger_name">
+<div class="row">
+    {{!-- section to add a new burger --}}
+    <div class="rounded col-md center"
+        style="background-color: #4e8d7c; text-align:center; padding: 5vmin; margin:5vmin 10vmin 3vmin">
+        <h2>Add a new burger:</h2>
+        <form class="form-class">
+            <div>
+                <label for="new">Burger name:</label>
+                <input type="text" id="new" name="burger_name">
+            </div>
+            <button type="submit">Add Burger</button>
+        </form>
     </div>
-    <button type="submit">Add Burger</button>
-</form>
+</div>
+
+<div class="row" style="margin: 1vmin 5vmin">
+    {{!-- burger information for newly added burgers --}}
+    <div class="col-md">
+        <div class="container rounded" style="background-color: #4e8d7c; text-align:center; padding: 5vmin;">
+            <h2>I must eat these</h2>
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                <li>
+                    <span>{{this.burger_name}}</span>
+                    <button class="eatMe" type="button" id="eat" data-id="{{this.id}}" data-newEat="{{eat}}">Eat
+                        it!</button>
+                </li>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    {{!-- burger information for the consumed burgers --}}
+    <div class="col-md">
+        <div class="container rounded" style="background-color: #4e8d7c; text-align:center; padding: 5vmin">
+            <h2>I already ate these</h2>
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                <li>
+                    <span>{{this.burger_name}}</span>
+                    <button type="button" class="delete" data-id="{{this.id}}">Delete it!</button>
+                </li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+</div>
