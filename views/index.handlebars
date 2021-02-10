@@ -1,6 +1,8 @@
 {{!-- add bulk html outline for the content of the burger page --}}
-<h1 style="text-align:center; padding: 4vmin">Burger Love
-</h1>
+<div class="jumbotron" style="background-color: #fbf6f0; text-align:center; padding: 4vmin;  font-family: Arial, Helvetica, sans-serif;">
+    <img src="/assets/android-chrome-192x192.png" alt="burger icon" height="100vmin">
+    <h1 style="font-weight: bold;">True Burger Love</h1>
+</div>
 
 <div class="row">
     {{!-- section to add a new burger --}}
@@ -27,7 +29,8 @@
                 {{#unless devoured}}
                 <div>
                     <span>{{this.burger_name}}</span>
-                    <button style="background-color: #cbefef;" class="eatMe btn shadow" type="button" id="eat" data-id="{{this.id}}" data-newEat="{{eat}}">Eat
+                    <button style="background-color: #cbefef;" class="eatMe btn shadow" type="button" id="eat"
+                        data-id="{{this.id}}" data-newEat="{{eat}}">Eat
                         it!</button>
                 </div>
                 {{/unless}}
@@ -45,7 +48,8 @@
                 {{#if devoured}}
                 <div>
                     <span>{{this.burger_name}}</span>
-                    <button style="background-color: #ffc596;" class="delete btn shadow" type="button" data-id="{{this.id}}">Delete it!</button>
+                    <button style="background-color: #ffc596;" class="delete btn shadow" type="button"
+                        data-id="{{this.id}}">Delete it!</button>
                 </div>
                 {{/if}}
                 {{/each}}
